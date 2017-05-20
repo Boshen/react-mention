@@ -6,23 +6,37 @@
   "author": "Boshen Chen <boshenc@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config webpack/dev.js"
+    "start": "webpack-dev-server --config webpack/dev.js",
+    "test": "jest --watch test/",
+    "test-single": "jest test/"
   },
   "peerDependencies": {
     "react": "^15.5.4",
     "tslib": "^1.7.1"
   },
   "devDependencies": {
+    "@types/jest": "^19.2.3",
+    "@types/node": "^7.0.21",
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
     "html-webpack-plugin": "^2.28.0",
+    "jest": "^20.0.3",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
+    "ts-jest": "^20.0.4",
     "ts-loader": "^2.0.3",
     "tslint": "^5.2.0",
     "tslint-loader": "^3.5.3",
     "typescript": "^2.3.2",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "./node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "\\.(test|spec)\\.(tsx?)$",
+    "moduleFileExtensions": [ "ts", "tsx", "js", "json" ]
   }
 }

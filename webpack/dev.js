@@ -3,22 +3,16 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 
-  entry: {
-    index: './page/index.tsx'
-  },
+  entry: './page/index.tsx',
 
   devtool: 'inline-source-map',
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'page'),
     stats: 'errors-only'
   },
 
   resolve: {
-    extensions: [
-      '.ts',
-      '.js'
-    ]
+    extensions: ['.tsx', '.ts', '.js']
   },
 
   module: {
