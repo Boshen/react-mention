@@ -1,0 +1,8 @@
+{
+  "name": "react-mention",
+  "version": "0.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Boshen/react-mention.git",
+  "author": "Boshen Chen <boshenc@gmail.com>",
+  "license": "MIT"
+}
