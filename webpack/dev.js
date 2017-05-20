@@ -1,13 +1,22 @@
+const webpack = require('webpack')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
 
-  entry: './page/index.tsx',
+  entry: [
+    'react-hot-loader/patch',
+    'webpack-dev-server/client?http://localhost:8080',
+    'webpack/hot/only-dev-server',
 
-  devtool: 'inline-source-map',
+    './page/index.tsx'
+  ],
+
+  devtool: 'source-map',
 
   devServer: {
+    hot: true,
     stats: 'errors-only'
   },
 
@@ -24,12 +33,14 @@ module.exports = {
         /node_modules/
       ],
       query: {
-        emitErrors: true,
         formatter: 'stylish'
       }
     }, {
       test: /\.tsx?$/,
-      loader: 'ts-loader'
+      loaders: [
+        'react-hot-loader/webpack',
+        'awesome-typescript-loader'
+      ]
     }]
   },
 
@@ -37,6 +48,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './page/index.html'
     }),
+
+    new webpack.HotModuleReplacementPlugin(),
+
+    new webpack.NamedModulesPlugin(),
+
+    new CheckerPlugin(),
   ]
 
 }
