@@ -10,6 +10,10 @@
   version "7.0.21"
   resolved "http://registry.npm.taobao.org/@types/node/download/@types/node-7.0.21.tgz#22a890f19b26cff9b6699b493dea1bcee4410da1"
 
+"@types/prop-types@^15.5.1":
+  version "15.5.1"
+  resolved "http://registry.npm.taobao.org/@types/prop-types/download/@types/prop-types-15.5.1.tgz#1ecf52621299e65b855374337fb11fd2d1066fc1"
+
 "@types/react-dom@^15.5.0":
   version "15.5.0"
   resolved "http://registry.npm.taobao.org/@types/react-dom/download/@types/react-dom-15.5.0.tgz#7f4fb9613d4051141773242f7b6b5f1a46b34bd9"
@@ -2806,7 +2810,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.4, prop-types@^15.5.7, prop-types@~15.5.7:
+prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.5.7, prop-types@~15.5.7:
   version "15.5.10"
   resolved "http://registry.npm.taobao.org/prop-types/download/prop-types-15.5.10.tgz#2797dfc3126182e3a95e3dfbb2e893ddd7456154"
   dependencies:
